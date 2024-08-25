@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+clipboard_content=$(xclip -selection clipboard -o)
+
+echo "$clipboard_content" | qrencode -o /tmp/clipboard_qr_code.png -s 10
+
+xdg-open /tmp/clipboard_qr_code.png
