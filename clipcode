@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 
+# ------------------------------------------------------------------------
+# Script Name: clipboard_to_qr.sh
+# Description: This script retrieves the current content of the clipboard,
+#              generates a QR code from that content, and displays the
+#              generated QR code using the default image viewer.
+#
+# Usage:       Run this script manually or set up a custom keyboard shortcut
+#              in Ubuntu to execute it with a specific key combination.
+#
+# Requirements:
+#              - xclip: to access the clipboard content
+#              - qrencode: to generate the QR code image
+#              - xdg-open: to open the QR code image in the default viewer
+#
+# Author:      Ritesh Srivastava
+# Date:        25/08/2024
+# ------------------------------------------------------------------------
+
 clipboard_content=$(xclip -selection clipboard -o)
 
 echo "$clipboard_content" | qrencode -o /tmp/clipboard_qr_code.png -s 10
