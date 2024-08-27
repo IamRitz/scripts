@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+du -a ~/ | cut -f2- | grep -i "pdf$\|jpg$\|mp4$\|mkv$\|avi$\|png$\|txt$\|xlsx$" | dmenu -i -l 20 -p "Search: " | xargs -I {} xdg-open "{}"
+

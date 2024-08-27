@@ -1,0 +1,15 @@
+alias ba="vim ~/.bashrc"
+alias xm="vim ~/.xmonad/xmonad.hs"
+alias al="vim ~/.config/alacritty/alacritty.yml"
+
+alias ls='exa --group-directories-first'
+alias la='exa -ax --group-directories-first'
+alias l2='exa -lT -L2 --group-directories-first'
+alias l3='exa -lT -L3 --group-directories-first'
+alias l4='exa -lT -L3 --group-directories-first'
+alias l='exa -l --group-directories-first'
+alias d='exa -D'
+alias ll='exa -la --group-directories-first'
+alias ka="killall"
+alias cd..='cd ..'
+example

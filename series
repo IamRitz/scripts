@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# A script to display all the series in the Series folder of ntfs drive
+# Whatever series you select, it opens it with vlc
+
+OPTIONS=("-sb" '#8a2be2' "-shb" '#ffd700' "-shf" '#342860' "-nhf" '#8a2be2' "-nhb" '#133337' "-h" "30" "-fn" 'NotoMonoRegular:regular:pixelsize=16')
+
+du -a /mnt/ntfs/Series | cut -f2- | grep -i "mkv$\|avi$\|mp4$" | dmenu -l 20 "${OPTIONS[@]}" | xargs -I {} devour vlc "{}" 

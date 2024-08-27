@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Remove all files
+pacman -Scc < <(echo -e "y\ny") >/dev/null 2>&1
+
+pacman -Rns $(pacman -Qtdq) < <(echo "y") >/dev/null 2>&1
+
+rm -rf /home/rs/.cache >/dev/null 2>&1

@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+# It list all the man pages available in man database
+# and after selection converts it in pdf format and 
+# opens it with zathura pdf reader
+
+man -k . | dmenu -l 10 -sb '#8a2be2' -shb '#ffd700' -shf '#342860' -nhf '#8a2be2' -nhb '#133337' -h 30 -fn 'NotoMonoRegular:regular:pixelsize=16' | awk '{print $1}' | xargs -r man -Tpdf | zathura -
